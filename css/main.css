@@ -1242,7 +1242,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5d935e;
+  background: #ffd7ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2738,7 +2738,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("/images/bg_kobe.jpeg");
+  background: url("../images/bg_kobe.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
