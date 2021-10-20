@@ -1242,7 +1242,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b9f7ff;
+  background: #5d935e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2738,7 +2738,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://initiate.alphacoders.com/images/106/cropped-1920-1080-1062817.jpg?3325");
+  background: url("/images/bg_kobe.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
