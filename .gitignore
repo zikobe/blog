@@ -1,6 +1,5 @@
 public
 .deploy_git
 db.json
-_config.yml
 .idea
 node_modules
