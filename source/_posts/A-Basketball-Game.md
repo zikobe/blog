@@ -1,7 +1,7 @@
 ---
 title: 比赛
 date: 2021-10-20 23:30:37
-categories: 子的日记
+categories: 朝花夕拾
 tags: 日记
 ---
 

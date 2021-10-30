@@ -1,7 +1,7 @@
 ---
 title: 爆胎
 date: 2021-10-19 00:13:39
-categories: 子的日记
+categories: 朝花夕拾
 tags: 日记
 ---
 

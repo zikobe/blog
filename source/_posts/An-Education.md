@@ -1,7 +1,7 @@
 ---
 title: 教育
 date: 2021-10-20 23:11:43
-categories: 子的日记
+categories: 朝花夕拾
 tags: 日记
 ---
 

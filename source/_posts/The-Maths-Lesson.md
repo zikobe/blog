@@ -1,7 +1,7 @@
 ---
 title: 数学课
 date: 2021-10-18 23:23:25
-categories: 子的日记
+categories: 朝花夕拾
 tags: 日记
 ---
 
