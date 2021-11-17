@@ -132,34 +132,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git commit --amend 用法</title>
-    <url>/blog/2021/11/17/Git-amend-%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>&emsp;&emsp;修改你最近一次提交可能是所有修改历史提交的操作中最常见的一个。 对于你的最近一次提交，你往往想做两件事情：简单地修改提交信息， 或者通过添加、移除或修改文件来更改提交实际的内容。</p>
-<p>&emsp;&emsp;如果，你只是想修改最近一次提交的提交信息，那么很简单：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit --amend</span></span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-<p>&emsp;&emsp;上面这条命令会将最后一次的提交信息载入到编辑器中供你修改。 当保存并关闭编辑器后，编辑器会将更新后的提交信息写入新提交中，它会成为新的最后一次提交。</p>
-<p>&emsp;&emsp;另一方面，如果你想要修改最后一次提交的实际内容，那么流程很相似：首先作出你想要补上的修改， 暂存它们，然后用 git commit –amend 以新的改进后的提交来 替换 掉旧有的最后一次提交，</p>
-<p>&emsp;&emsp;使用这个技巧的时候需要小心，因为修正会改变提交的 SHA-1 校验和。 它类似于一个小的变基——如果已经推送了最后一次提交就不要修正它。</p>
-<p>&emsp;&emsp;<strong>tips：</strong> 如果你的修补是琐碎的（如修改了一个笔误或添加了一个忘记暂存的文件）， 那么之前的提交信息不必修改，你只需作出更改，暂存它们，然后通过以下命令避免不必要的编辑器环节即可：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit --amend --no-edit</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h3><p>&emsp;&emsp;–amend命令适用于还没有 push 到 Git 服务器的提交（commit），使用 git commit –amend 后再使用 git push 就会将 –amend 后的 commit 推送到服务器。</p>
-<p>&emsp;&emsp;如果提交已经被 push 到了服务器，使用该命令后再 push 就会出现 [rejected] 问题。当然，你可以使用 git push -f origin master 强行上推。但是，这么做有两个前提：</p>
-<p>&emsp;&emsp;<strong>1. 其他人没有 clone 你的项目。</strong> 如果其他人正在使用你的项目，等你把 –amend 后的 commit 推送到服务器后，其他人使用 git pull 下载时，就会产生 merge 信息，需要他人手动修改。除非他重新 clone 你的仓库。</p>
-<p>&emsp;&emsp;<strong>2. 只有你自己向这个项目提交文件。</strong> 如果其他人也向这个项目提交文件，在你使用了 git push -f 后，很可能把其他人的 commit 干掉。</p>
-<p>&emsp;&emsp;<strong>所以，极其不建议、不建议、不建议使用 git push -f。</strong></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>&emsp;&emsp;如果真的发现 commit 被 push 后需要修改 commit 的内容，老老实实的再重新做一个 commit，然后 push。</p>
-]]></content>
-      <categories>
-        <category>技术笔记</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>amend</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>教诲</title>
     <url>/blog/2021/10/30/Edification/</url>
     <content><![CDATA[<p>&emsp;&emsp;“铃,铃,铃……”钟声响了</p>
@@ -196,6 +168,34 @@
       </tags>
   </entry>
   <entry>
+    <title>git commit --amend 用法</title>
+    <url>/blog/2021/11/17/Git-amend-%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>&emsp;&emsp;修改你最近一次提交可能是所有修改历史提交的操作中最常见的一个。 对于你的最近一次提交，你往往想做两件事情：简单地修改提交信息， 或者通过添加、移除或修改文件来更改提交实际的内容。</p>
+<p>&emsp;&emsp;如果，你只是想修改最近一次提交的提交信息，那么很简单：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit --amend</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>&emsp;&emsp;上面这条命令会将最后一次的提交信息载入到编辑器中供你修改。 当保存并关闭编辑器后，编辑器会将更新后的提交信息写入新提交中，它会成为新的最后一次提交。</p>
+<p>&emsp;&emsp;另一方面，如果你想要修改最后一次提交的实际内容，那么流程很相似：首先作出你想要补上的修改， 暂存它们，然后用 git commit –amend 以新的改进后的提交来 替换 掉旧有的最后一次提交，</p>
+<p>&emsp;&emsp;使用这个技巧的时候需要小心，因为修正会改变提交的 SHA-1 校验和。 它类似于一个小的变基——如果已经推送了最后一次提交就不要修正它。</p>
+<p>&emsp;&emsp;<strong>tips：</strong> 如果你的修补是琐碎的（如修改了一个笔误或添加了一个忘记暂存的文件）， 那么之前的提交信息不必修改，你只需作出更改，暂存它们，然后通过以下命令避免不必要的编辑器环节即可：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git commit --amend --no-edit</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h3><p>&emsp;&emsp;–amend命令适用于还没有 push 到 Git 服务器的提交（commit），使用 git commit –amend 后再使用 git push 就会将 –amend 后的 commit 推送到服务器。</p>
+<p>&emsp;&emsp;如果提交已经被 push 到了服务器，使用该命令后再 push 就会出现 [rejected] 问题。当然，你可以使用 git push -f origin master 强行上推。但是，这么做有两个前提：</p>
+<p>&emsp;&emsp;<strong>1. 其他人没有 clone 你的项目。</strong> 如果其他人正在使用你的项目，等你把 –amend 后的 commit 推送到服务器后，其他人使用 git pull 下载时，就会产生 merge 信息，需要他人手动修改。除非他重新 clone 你的仓库。</p>
+<p>&emsp;&emsp;<strong>2. 只有你自己向这个项目提交文件。</strong> 如果其他人也向这个项目提交文件，在你使用了 git push -f 后，很可能把其他人的 commit 干掉。</p>
+<p>&emsp;&emsp;<strong>所以，极其不建议、不建议、不建议使用 git push -f。</strong></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>&emsp;&emsp;如果真的发现 commit 被 push 后需要修改 commit 的内容，老老实实的再重新做一个 commit，然后 push。</p>
+]]></content>
+      <categories>
+        <category>技术笔记</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>amend</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>影的告别</title>
     <url>/blog/2021/10/18/The-Adieu-of-a-Shadow/</url>
     <content><![CDATA[<p>&emsp;&emsp;人睡到不知道时候的时候，就会有影来告别，说出那些话——</p>
@@ -220,26 +220,6 @@
       </categories>
   </entry>
   <entry>
-    <title>路灯怎么全熄了</title>
-    <url>/blog/2021/10/30/Why-all-the-Streetlights-go-off/</url>
-    <content><![CDATA[<p>&emsp;&emsp;“耿锐，你知道这些路灯熄了几天吗？”</p>
-<p>&emsp;&emsp;“不知道啊？这阵子我们政府穷得厉害，连这路灯的电费都负<sup>「1」</sup>不起。唉，我们村的政府真是腐败！”</p>
-<span id="more"></span>
-<p>&emsp;&emsp;直到今天傍晚我才听说村里停灯这起事。这灯一停，村里整夜都乌漆抹<sup>「2」</sup>黑的，想外出散散心都难喽。</p>
-<p>&emsp;&emsp;想到这些，不禁令我想起这几年乡村干部们的所作所为——</p>
-<p>&emsp;&emsp;乡村有重要的事需要村民们捐款，但事成之后，剩下的就全部给分了；乡村里的水利工程干部们全不过问，只让村民们自耕自凿，舍不得也不愿意拿出一分“私钱”为村民服务、建设乡村；一听说邻村有要买田地的，就兴奋、欢喜得大摆餐席庆祝，仿佛做了一笔大生意，殊不知这样做是在割自己的肉；而今年选干部时，多少资产家出高价收买人心以取得一官半职，但这不是从人民利益、从乡村利益出发，而是放长线钓大鱼——“今天我花了这些钱买下这个官位，日后一定要靠这个官位讨回双倍的补偿”。总之，村里当干部的没有几个是真心为乡村、为人民着想，全都是以“利”字当头，万事都从”利”字出发，而不是从人出发。”</p>
-<p>&emsp;&emsp;试问，这“清朝末”般的政治局势会给村子带来多大影响呢？唉！……</p>
-<p>&emsp;&emsp;二零零八年十月二十五日&emsp;星期六</p>
-<p>&emsp;&emsp;[1]错别字，应作“付”，付不起；或者改为“负担不起”。大概当时把二者混淆了。<br>&emsp;&emsp;[2]错别字，应是“乌漆麻黑”</p>
-]]></content>
-      <categories>
-        <category>朝花夕拾</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学课</title>
     <url>/blog/2021/10/18/The-Maths-Lesson/</url>
     <content><![CDATA[<p>&emsp;&emsp;今天上午第二堂课是数学课，老师的讲课声比平时低沉得多,有时还上句接不上下句。</p>
@@ -251,6 +231,26 @@
 <p>&emsp;&emsp;我被老师这种恪尽职守的精神所感染，也学会了体谅。我不会成为老师的负担，我要成为老师的助手，我愿为老师负担！</p>
 <p>&emsp;&emsp;我深思着……</p>
 <p>&emsp;&emsp;二零零八年九月二十五日&emsp;星期四</p>
+]]></content>
+      <categories>
+        <category>朝花夕拾</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>路灯怎么全熄了</title>
+    <url>/blog/2021/10/30/Why-all-the-Streetlights-go-off/</url>
+    <content><![CDATA[<p>&emsp;&emsp;“耿锐，你知道这些路灯熄了几天吗？”</p>
+<p>&emsp;&emsp;“不知道啊？这阵子我们政府穷得厉害，连这路灯的电费都负<sup>「1」</sup>不起。唉，我们村的政府真是腐败！”</p>
+<span id="more"></span>
+<p>&emsp;&emsp;直到今天傍晚我才听说村里停灯这起事。这灯一停，村里整夜都乌漆抹<sup>「2」</sup>黑的，想外出散散心都难喽。</p>
+<p>&emsp;&emsp;想到这些，不禁令我想起这几年乡村干部们的所作所为——</p>
+<p>&emsp;&emsp;乡村有重要的事需要村民们捐款，但事成之后，剩下的就全部给分了；乡村里的水利工程干部们全不过问，只让村民们自耕自凿，舍不得也不愿意拿出一分“私钱”为村民服务、建设乡村；一听说邻村有要买田地的，就兴奋、欢喜得大摆餐席庆祝，仿佛做了一笔大生意，殊不知这样做是在割自己的肉；而今年选干部时，多少资产家出高价收买人心以取得一官半职，但这不是从人民利益、从乡村利益出发，而是放长线钓大鱼——“今天我花了这些钱买下这个官位，日后一定要靠这个官位讨回双倍的补偿”。总之，村里当干部的没有几个是真心为乡村、为人民着想，全都是以“利”字当头，万事都从”利”字出发，而不是从人出发。”</p>
+<p>&emsp;&emsp;试问，这“清朝末”般的政治局势会给村子带来多大影响呢？唉！……</p>
+<p>&emsp;&emsp;二零零八年十月二十五日&emsp;星期六</p>
+<p>&emsp;&emsp;[1]错别字，应作“付”，付不起；或者改为“负担不起”。大概当时把二者混淆了。<br>&emsp;&emsp;[2]错别字，应是“乌漆麻黑”</p>
 ]]></content>
       <categories>
         <category>朝花夕拾</category>
