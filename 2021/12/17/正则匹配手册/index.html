@@ -22,28 +22,34 @@
     var CONFIG = {"hostname":"zikobe.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="岁痕">
-<meta property="og:url" content="https://zikobe.github.io/index.html">
+  <meta name="description" content="PCRE表达式全集   字符 描述    \ 将下一个字符标记为一个特殊字符（File Format Escape，清单见本表）、或一个原义字符（Identity Escape，有^$()*+?.[{|共计12个)、或一个向后引用（backreferences）、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。序列“\”匹配“\”而“(”则匹配“(”。   ^ 匹配输入字符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则匹配手册">
+<meta property="og:url" content="https://zikobe.github.io/2021/12/17/%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E6%89%8B%E5%86%8C/index.html">
 <meta property="og:site_name" content="岁痕">
+<meta property="og:description" content="PCRE表达式全集   字符 描述    \ 将下一个字符标记为一个特殊字符（File Format Escape，清单见本表）、或一个原义字符（Identity Escape，有^$()*+?.[{|共计12个)、或一个向后引用（backreferences）、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。序列“\”匹配“\”而“(”则匹配“(”。   ^ 匹配输入字符">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-17T06:48:10.000Z">
+<meta property="article:modified_time" content="2021-12-17T07:42:38.504Z">
 <meta property="article:author" content="zikobe">
+<meta property="article:tag" content="正则匹配">
+<meta property="article:tag" content="PCRE表达式">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://zikobe.github.io/">
+<link rel="canonical" href="https://zikobe.github.io/2021/12/17/%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E6%89%8B%E5%86%8C/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>岁痕</title>
+  <title>正则匹配手册 | 岁痕</title>
   
 
 
@@ -181,9 +187,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -199,10 +206,9 @@
       <meta itemprop="name" content="岁痕">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/17/%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">正则匹配手册</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          正则匹配手册
+        </h1>
 
         <div class="post-meta">
 
@@ -265,7 +271,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="PCRE表达式全集"><a href="#PCRE表达式全集" class="headerlink" title="PCRE表达式全集"></a>PCRE表达式全集</h3><table>
+        <h3 id="PCRE表达式全集"><a href="#PCRE表达式全集" class="headerlink" title="PCRE表达式全集"></a>PCRE表达式全集</h3><table>
 <thead>
 <tr>
 <th>字符</th>
@@ -498,452 +504,47 @@
 </tr>
 </tbody></table>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/blog/tags/%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D/" rel="tag"># 正则匹配</a>
+              <a href="/blog/tags/PCRE%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag"># PCRE表达式</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/11/%E8%AF%84%E3%80%8A%E5%85%A8%E6%B0%91%E8%B6%85%E4%BA%BA%E6%B1%89%E8%80%83%E5%85%8B%E3%80%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/11/%E8%AF%84%E3%80%8A%E5%85%A8%E6%B0%91%E8%B6%85%E4%BA%BA%E6%B1%89%E8%80%83%E5%85%8B%E3%80%8B/" class="post-title-link" itemprop="url">评《全民超人汉考克》</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 22:31:17 / 修改时间：22:48:56" itemprop="dateCreated datePublished" datetime="2021-12-11T22:31:17+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/11/%E8%AF%84%E3%80%8A%E5%85%A8%E6%B0%91%E8%B6%85%E4%BA%BA%E6%B1%89%E8%80%83%E5%85%8B%E3%80%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/11/评《全民超人汉考克》/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>700</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;《全民超人汉考克》是我最喜欢的影片之一，它也是我所看过的电影中最具有教育意义的一部。片中讲叙了一个具有超能力的外星人来到了他完全不熟识的地球，他不了解地球人的生活，但却拥有一颗正义的心。每次遇到匪徒他都会见义勇为，帮人们脱离困境，但也正因如此，他多次毁坏当地的公共财产，给洛杉矶带来严重的经济损失。所以他虽然救了人，但人们都把他的拯救当作理所当然，而对他的过失却铭记在心，把他批评作一个自私自利、狂妄自大的人，还把他叫做“混球”。至此，汉考克陷入了孤独无助的深渊。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/11/%E8%AF%84%E3%80%8A%E5%85%A8%E6%B0%91%E8%B6%85%E4%BA%BA%E6%B1%89%E8%80%83%E5%85%8B%E3%80%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/11/A-Friend-in-need-is-a-Friend-Indeed/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/11/A-Friend-in-need-is-a-Friend-Indeed/" class="post-title-link" itemprop="url">患难见真情</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 21:55:50 / 修改时间：22:25:54" itemprop="dateCreated datePublished" datetime="2021-12-11T21:55:50+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/11/A-Friend-in-need-is-a-Friend-Indeed/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/11/A-Friend-in-need-is-a-Friend-Indeed/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;生活中也许有不少人问你：“你最好的朋友是谁？”我想，这个问题你一定很感为难，因为要从你的朋友中挑出一个，同时也要抛弃许多个，这种忍痛割爱的做法能不让人为难吗？我曾经对这个问题回答道：“没有一个。”确实，当时的我真的不知我究竟有没有一个称得上“最好”的朋友。不过现在假若你问我同一个问题，我会很肯定的回答：“有。”</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/11/A-Friend-in-need-is-a-Friend-Indeed/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2021/12/11/%E8%AF%84%E3%80%8A%E5%85%A8%E6%B0%91%E8%B6%85%E4%BA%BA%E6%B1%89%E8%80%83%E5%85%8B%E3%80%8B/" rel="prev" title="评《全民超人汉考克》">
+      <i class="fa fa-chevron-left"></i> 评《全民超人汉考克》
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/11/%E2%80%9C%E8%BE%9E%E7%8E%A9%E8%BF%8E%E5%AD%A6%E2%80%9D%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/11/%E2%80%9C%E8%BE%9E%E7%8E%A9%E8%BF%8E%E5%AD%A6%E2%80%9D%E6%83%B3/" class="post-title-link" itemprop="url">“辞玩迎学”想</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 21:38:35 / 修改时间：21:49:08" itemprop="dateCreated datePublished" datetime="2021-12-11T21:38:35+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/11/%E2%80%9C%E8%BE%9E%E7%8E%A9%E8%BF%8E%E5%AD%A6%E2%80%9D%E6%83%B3/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/11/“辞玩迎学”想/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>351</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;多久没有写日记了，算起来也有半个多月了。</p>
-<p>&emsp;&emsp;这半个多月我全部浪费掉了，全被玩完了。正所谓“光阴似箭，日月如梭”，永远都只有人等时间，从没有时间等人的，稍不留神，初中生活就要挥手告别了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/11/%E2%80%9C%E8%BE%9E%E7%8E%A9%E8%BF%8E%E5%AD%A6%E2%80%9D%E6%83%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/11/The-Black-Thursday/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/11/The-Black-Thursday/" class="post-title-link" itemprop="url">黑暗星期四</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 19:53:28 / 修改时间：21:23:45" itemprop="dateCreated datePublished" datetime="2021-12-11T19:53:28+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/11/The-Black-Thursday/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/11/The-Black-Thursday/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>764</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;今天我得知了期末考试的成绩——我得了第五名。</p>
-<p>&emsp;&emsp;这在别人看来应该是件值得欢喜的事，但我却为了它整天愁眉不展。要知道，平时成绩一向是名列前茅的我这次滑至第五名是多么令人可悲的事，况且与第六名又是相差那零点几分，这样的成绩是多么的危险、多么的不乐观啊！</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/11/The-Black-Thursday/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -990,6 +591,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PCRE%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A8%E9%9B%86"><span class="nav-text">PCRE表达式全集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">常用正则表达式</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1194,6 +796,26 @@ window.addEventListener('pjax:success', () => {
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://zikobe.github.io/2021/12/17/%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D%E6%89%8B%E5%86%8C/";
+    this.page.identifier = "2021/12/17/正则匹配手册/";
+    this.page.title = "正则匹配手册";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://zikobe.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
     </div>
