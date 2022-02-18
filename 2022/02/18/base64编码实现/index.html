@@ -22,28 +22,36 @@
     var CONFIG = {"hostname":"zikobe.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="岁痕">
-<meta property="og:url" content="https://zikobe.github.io/index.html">
+  <meta name="description" content="Base64编码的作用&amp;emsp;&amp;emsp;由于某些系统中只能使用ASCII字符，Base64就是用来将非ASCII字符的数据转换成ASCII字符的一种方法。Base64常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括MIME的电子邮件及XML的一些复杂数据 Base64编码的原理&amp;emsp;&amp;emsp;它是用64个可打印字符表示二进制所有数据方法。由于2的6次方等于64，所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Base64编码实现">
+<meta property="og:url" content="https://zikobe.github.io/2022/02/18/base64%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="岁痕">
+<meta property="og:description" content="Base64编码的作用&amp;emsp;&amp;emsp;由于某些系统中只能使用ASCII字符，Base64就是用来将非ASCII字符的数据转换成ASCII字符的一种方法。Base64常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括MIME的电子邮件及XML的一些复杂数据 Base64编码的原理&amp;emsp;&amp;emsp;它是用64个可打印字符表示二进制所有数据方法。由于2的6次方等于64，所">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.xiayf.cn/2016/01/24/base64-encoding/media/14542616644295.jpg">
+<meta property="article:published_time" content="2022-02-18T02:40:15.000Z">
+<meta property="article:modified_time" content="2022-02-18T03:08:21.233Z">
 <meta property="article:author" content="zikobe">
+<meta property="article:tag" content="php">
+<meta property="article:tag" content="base64">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.xiayf.cn/2016/01/24/base64-encoding/media/14542616644295.jpg">
 
-<link rel="canonical" href="https://zikobe.github.io/">
+<link rel="canonical" href="https://zikobe.github.io/2022/02/18/base64%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>岁痕</title>
+  <title>Base64编码实现 | 岁痕</title>
   
 
 
@@ -181,9 +189,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -199,10 +208,9 @@
       <meta itemprop="name" content="岁痕">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2022/02/18/base64%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">Base64编码实现</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Base64编码实现
+        </h1>
 
         <div class="post-meta">
 
@@ -265,7 +273,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="Base64编码的作用"><a href="#Base64编码的作用" class="headerlink" title="Base64编码的作用"></a>Base64编码的作用</h3><p>&emsp;&emsp;由于某些系统中只能使用ASCII字符，Base64就是用来将非ASCII字符的数据转换成ASCII字符的一种方法。Base64常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括MIME的电子邮件及XML的一些复杂数据</p>
+        <h3 id="Base64编码的作用"><a href="#Base64编码的作用" class="headerlink" title="Base64编码的作用"></a>Base64编码的作用</h3><p>&emsp;&emsp;由于某些系统中只能使用ASCII字符，Base64就是用来将非ASCII字符的数据转换成ASCII字符的一种方法。Base64常用于在通常处理文本数据的场合，表示、传输、存储一些二进制数据，包括MIME的电子邮件及XML的一些复杂数据</p>
 <h3 id="Base64编码的原理"><a href="#Base64编码的原理" class="headerlink" title="Base64编码的原理"></a>Base64编码的原理</h3><p>&emsp;&emsp;它是用64个可打印字符表示二进制所有数据方法。由于2的6次方等于64，所以可以用每6个位元为一个单元，对应某个可打印字符。我们知道三个字节有24个位元，就可以刚好对应于4个Base64单元，即3个字节需要用4个Base64的可打印字符来表示。在Base64中的可打印字符包括字母A-Z、a-z、数字0-9 ，这样共有62个字符，此外两个可打印符号在不同的系统中一般有所不同。但是，我们经常所说的Base64另外2个字符是：“+/”。这64个字符，所对应表如下。<br><img src="http://blog.xiayf.cn/2016/01/24/base64-encoding/media/14542616644295.jpg"></p>
 <p>&emsp;&emsp;转换的时候，将三个byte的数据，先后放入一个24bit的缓冲区中，先来的byte占高位。数据不足3byte的话，于缓冲区中剩下的bit用0补足。然后，每次取出6个bit，按照其值对应的字符作为编码后的输出。不断进行，直到全部输入数据转换完成。</p>
 <p>&emsp;&emsp;如果最后剩下两个输入数据，在编码结果后加1个“=”；如果最后剩下一个输入数据，编码结果后加2个“=”。</p>
@@ -276,455 +284,47 @@
 
 
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/blog/tags/php/" rel="tag"># php</a>
+              <a href="/blog/tags/base64/" rel="tag"># base64</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/17/%E6%B0%B8%E8%BF%9C%E4%B9%9F%E4%B8%8D%E8%A6%81%E5%BF%BD%E8%A7%86%E9%82%A3%E9%A2%97%E5%86%A0%E5%86%9B%E7%9A%84%E5%BF%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/17/%E6%B0%B8%E8%BF%9C%E4%B9%9F%E4%B8%8D%E8%A6%81%E5%BF%BD%E8%A7%86%E9%82%A3%E9%A2%97%E5%86%A0%E5%86%9B%E7%9A%84%E5%BF%83/" class="post-title-link" itemprop="url">永远也不要忽视那颗冠军的心</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-12-17 22:51:53" itemprop="dateCreated datePublished" datetime="2021-12-17T22:51:53+08:00">2021-12-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-25 23:55:31" itemprop="dateModified" datetime="2021-12-25T23:55:31+08:00">2021-12-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/17/%E6%B0%B8%E8%BF%9C%E4%B9%9F%E4%B8%8D%E8%A6%81%E5%BF%BD%E8%A7%86%E9%82%A3%E9%A2%97%E5%86%A0%E5%86%9B%E7%9A%84%E5%BF%83/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/17/永远也不要忽视那颗冠军的心/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>447</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;当你对胜利的渴望到了极限的时候，你是否会觉得全身充满力量，你的血液在涌动，心跳在加速，好似有一股强大的力量将要爆发？如果答案是肯定的，那么你是拥有了一颗冠军的心。</p>
-<p>&emsp;&emsp;当你在快要绝望了的时候，希望的火重新被点燃，离胜利越来越近，到只要你再前进一步就可以到达成功的彼岸的那一瞬，你就已拥有了一颗冠军的心。这时的你拥有多么强大的力量是没有人知道、也是无法估量的。谁也不知道下一秒将会发生怎样的奇迹，这时你已化身为一个无所畏惧、勇往直前的超人了。不管对手有多么强悍、前方有多大的险阻，你都不会退缩，因为你那颗冠军的心已越发坚固，没有人可阻止得了你了，他们都会为你让路。终于，你胜利了，心中的那颗心发光闪亮了。这时，所有人都会觉得不可思议，因为这简直就是个奇迹。</p>
-<p>&emsp;&emsp;记住，永远都不要忽视那颗冠军的心！</p>
-<p>——拥有一颗冠军的心的人的求生欲甚至超过了一个正在生死界线挣扎的人的求生欲。</p>
-<p>&emsp;&emsp;二零零九年三月二十二日&emsp;星期日</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/17/%E5%A4%9C%E7%9A%84%E9%9A%8F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/17/%E5%A4%9C%E7%9A%84%E9%9A%8F%E6%83%B3/" class="post-title-link" itemprop="url">夜的随想</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-17 22:35:46 / 修改时间：22:44:51" itemprop="dateCreated datePublished" datetime="2021-12-17T22:35:46+08:00">2021-12-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/17/%E5%A4%9C%E7%9A%84%E9%9A%8F%E6%83%B3/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/17/夜的随想/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>452</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;夜已深<br>&emsp;&emsp;青蛙与蟋蟀在唱着夜曲<br>&emsp;&emsp;我在桌前写着<br>&emsp;&emsp;脑海突然浮现出你的身影</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/17/%E5%A4%9C%E7%9A%84%E9%9A%8F%E6%83%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/17/%E4%B8%8D%E5%B9%B8-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/17/%E4%B8%8D%E5%B9%B8-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90/" class="post-title-link" itemprop="url">不幸+幸运+幸运=幸运</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-17 22:22:10 / 修改时间：22:35:29" itemprop="dateCreated datePublished" datetime="2021-12-17T22:22:10+08:00">2021-12-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/17/%E4%B8%8D%E5%B9%B8-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/17/不幸-幸运-幸运-幸运/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>494</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;今天一大早，倒霉的事就降临在我的身上——骑着自行车上学的时候，车突然“瘫痪”，不能行驶。</p>
-<p>&emsp;&emsp;不过，还好——我的好朋友**碰巧看见他弟弟在球场打球，于是叫他帮我把车子拿去修理。其实要到维修铺的路不短，而车子的前轮又不得滚动，所以得费好大的劲才能把它推到维修铺去修理。这的确是不幸中的大幸。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/17/%E4%B8%8D%E5%B9%B8-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90-%E5%B9%B8%E8%BF%90/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2021/12/17/%E6%B0%B8%E8%BF%9C%E4%B9%9F%E4%B8%8D%E8%A6%81%E5%BF%BD%E8%A7%86%E9%82%A3%E9%A2%97%E5%86%A0%E5%86%9B%E7%9A%84%E5%BF%83/" rel="prev" title="永远也不要忽视那颗冠军的心">
+      <i class="fa fa-chevron-left"></i> 永远也不要忽视那颗冠军的心
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://zikobe.github.io/2021/12/17/%E6%B4%BB%E9%9B%B7%E9%94%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.jpeg">
-      <meta itemprop="name" content="zikobe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="岁痕">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/2021/12/17/%E6%B4%BB%E9%9B%B7%E9%94%8B/" class="post-title-link" itemprop="url">活雷锋</a>
-        </h2>
-
-        <div class="post-meta">
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-17 22:09:22 / 修改时间：22:21:07" itemprop="dateCreated datePublished" datetime="2021-12-17T22:09:22+08:00">2021-12-17</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" itemprop="url" rel="index"><span itemprop="name">朝花夕拾</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/blog/2021/12/17/%E6%B4%BB%E9%9B%B7%E9%94%8B/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/12/17/活雷锋/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>413</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;今天我们学校出现了两位“活雷锋”。怎么这样说呢？事情是这样的。</p>
-<p>&emsp;&emsp;据说，他俩在放学路上突然遇到一个掉在水中的小孩，于是他们用雨伞伸进池里，让小孩抓住雨伞，然后把他拖上来。最后在他们的帮助下，近乎绝望的孩子幸运地生存了下来。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/2021/12/17/%E6%B4%BB%E9%9B%B7%E9%94%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/6/">6</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -771,6 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Base64%E7%BC%96%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">Base64编码的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base64%E7%BC%96%E7%A0%81%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-text">Base64编码的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Base64%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">Base64代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%8A%A0%E5%AF%86%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">1、加密代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E8%A7%A3%E5%AF%86%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-text">2、解密代码实现</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -975,6 +576,26 @@ window.addEventListener('pjax:success', () => {
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://zikobe.github.io/2022/02/18/base64%E7%BC%96%E7%A0%81%E5%AE%9E%E7%8E%B0/";
+    this.page.identifier = "2022/02/18/base64编码实现/";
+    this.page.title = "Base64编码实现";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://zikobe.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
     </div>
